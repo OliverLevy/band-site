@@ -18,7 +18,7 @@
   width: 100%;
 
   &__logo{
-    margin: 20px;
+    margin: 20px 0 10px;
   }
 
   &__list{
@@ -41,8 +41,56 @@
   }
 
   &__list-item-anchor{
-    color: white;
+    color: grey;
     text-decoration: none;
     font-family: $font;
+
+    &--active{
+      color: white;
+    }
+  }
+}
+
+.hero{
+  background-image: url(/Assets/Images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 183px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__text{
+    color: white;
+    margin: 16px;
+  }
+
+}
+
+.main{
+  font-family: $font;
+  color: $black;
+}
+
+.about{
+
+  margin: 16px;
+
+  &__hero-img{
+    width: 100%;
+  }
+}
+
+.gallery{
+  margin: 16px;
+
+  &__items{
+
+  }
+
+  &__img{
+    width: 100%;
+    margin: 8px 0;
+    background: pink;
   }
 }

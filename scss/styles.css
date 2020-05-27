@@ -92,7 +92,7 @@ h5 {
 }
 
 .header__logo {
-  margin: 20px;
+  margin: 20px 0 10px;
 }
 
 .header__list {
@@ -124,8 +124,56 @@ h5 {
 }
 
 .header__list-item-anchor {
-  color: white;
+  color: grey;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+}
+
+.header__list-item-anchor--active {
+  color: white;
+}
+
+.hero {
+  background-image: url(/Assets/Images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 183px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.hero__text {
+  color: white;
+  margin: 16px;
+}
+
+.main {
+  font-family: "Roboto", sans-serif;
+  color: #323232;
+}
+
+.about {
+  margin: 16px;
+}
+
+.about__hero-img {
+  width: 100%;
+}
+
+.gallery {
+  margin: 16px;
+}
+
+.gallery__img {
+  width: 100%;
+  margin: 8px 0;
+  background: pink;
 }
 /*# sourceMappingURL=styles.css.map */
