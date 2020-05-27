@@ -1,0 +1,31 @@
+@import "partials/reset";
+@import "partials/fonts";
+@import "partials/mixin";
+@import "partials/variables";
+
+
+
+// fontz yall
+
+
+
+
+.header{
+  background-color: $black;
+
+  &__logo{
+    color: white;
+  }
+
+  &__list{
+
+  }
+
+  &__list-item{
+
+  }
+
+  &__list-item-anchor{
+    color: white;
+  }
+}

@@ -1,0 +1,66 @@
+@import "variables";
+@import "mixin";
+
+h1{
+  @include fonts();
+  font-size: 24px;
+  line-height: 32px;
+
+  @include tablet(){
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+h2{
+  @include fonts();
+  font-size: 14px;
+  line-height: 22px;
+
+  @include tablet(){
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+h3{
+  @include fonts();
+  font-size: 14px;
+  line-height: 22px;
+
+  @include tablet(){
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+
+
+h4{
+  @include fonts();
+  font-size: 13px;
+  line-height: 18px;
+
+  @include tablet(){
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.h4--list-contact{
+  @include fonts();
+  font-size: 13px;
+  line-height: 18px;
+
+  @include tablet(){
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+h5{
+  @include fonts();
+  font-size: 12px;
+  line-height: 20px;
+}
+
