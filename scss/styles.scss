@@ -12,20 +12,37 @@
 
 .header{
   background-color: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 
   &__logo{
-    color: white;
+    margin: 20px;
   }
 
   &__list{
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
   }
 
   &__list-item{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding-bottom: 15px;
 
+    &--active{
+      border-bottom: solid 5px white;
+    }
   }
 
   &__list-item-anchor{
     color: white;
+    text-decoration: none;
+    font-family: $font;
   }
 }
