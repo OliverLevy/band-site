@@ -71,7 +71,7 @@
     }
 
     &--active{
-      border-bottom: solid 5px white;
+      border-bottom: solid 5px $white;
     }
   }
 
@@ -79,9 +79,10 @@
     color: grey;
     text-decoration: none;
     font-family: $font;
+    font-weight: 500;
 
     &--active{
-      color: white;
+      color: $white;
       transform: translateY(2.5px);
     }
   }
@@ -101,7 +102,7 @@
   }
 
   &__text{
-    color: white;
+    color: $white;
     margin: 16px;
 
     @include tablet{
@@ -192,23 +193,30 @@
     @include desktop{
       padding-right: 40px;
       width: 420px;
+      padding-bottom: 48px;
     }
   }
 }
 
 .gallery{
-  margin: 16px;
+  padding: 16px;
+  background: $offwhite;
 
   @include tablet{
-    margin: 24px;
+    padding: 24px;
   }
 
   @include desktop{
-    margin: 0 180px;
+    padding: 48px 180px;
   }
 
   &__title{
     padding: 32px 0 24px;
+
+    @include desktop{
+      margin-bottom: 40px;
+      padding: 0;
+    }
   }
 
   &__items{
@@ -238,7 +246,7 @@
 .footer{
   background: $black;
   padding: 40px 8px;
-  color: white;
+  color: $white;
 
   @include tablet{
     padding: 40px 24px;
@@ -272,8 +280,8 @@
     }
   }
 
-  &__text{
-  }
+  // &__text{
+  // }
 
   &__icon{
     padding: 8px;
@@ -296,12 +304,16 @@
   }
 
   &__content-item{
-    color: white;
+    color: $white;
     font-family: $font;
     padding: 24px 0 0;
 
     @include tablet{
       margin-right: 24px;
+    }
+
+    @include desktop{
+      margin-right: 48px;
     }
   }
 
@@ -322,7 +334,7 @@
   }
 
   &__content-email{
-    color: white;
+    color: $white;
     padding-bottom: 20px;
     text-decoration: none;
     display: block;

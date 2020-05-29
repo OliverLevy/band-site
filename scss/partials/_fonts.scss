@@ -1,14 +1,19 @@
 @import "variables";
 @import "mixin";
 
+html{
+  font-size: 16px;
+}
+
 h1{
   @include fonts();
   font-size: 26px;
   line-height: 32px;
 
   @include tablet(){
-    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 44px;
+    font-weight: 700;
   }
 }
 

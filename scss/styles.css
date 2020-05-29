@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-size: 26px;
@@ -13,8 +17,9 @@ h1 {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 44px;
+    font-weight: 700;
   }
 }
 
@@ -192,17 +197,18 @@ p {
 }
 
 .header__list-item--active {
-  border-bottom: solid 5px white;
+  border-bottom: solid 5px #ffffff;
 }
 
 .header__list-item-anchor {
   color: grey;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 .header__list-item-anchor--active {
-  color: white;
+  color: #ffffff;
   -webkit-transform: translateY(2.5px);
           transform: translateY(2.5px);
 }
@@ -230,7 +236,7 @@ p {
 }
 
 .hero__text {
-  color: white;
+  color: #ffffff;
   margin: 16px;
 }
 
@@ -332,27 +338,36 @@ p {
   .about__article-text {
     padding-right: 40px;
     width: 420px;
+    padding-bottom: 48px;
   }
 }
 
 .gallery {
-  margin: 16px;
+  padding: 16px;
+  background: #fafafa;
 }
 
 @media (min-width: 768px) {
   .gallery {
-    margin: 24px;
+    padding: 24px;
   }
 }
 
 @media (min-width: 1200px) {
   .gallery {
-    margin: 0 180px;
+    padding: 48px 180px;
   }
 }
 
 .gallery__title {
   padding: 32px 0 24px;
+}
+
+@media (min-width: 1200px) {
+  .gallery__title {
+    margin-bottom: 40px;
+    padding: 0;
+  }
 }
 
 .gallery__items {
@@ -394,7 +409,7 @@ p {
 .footer {
   background: #323232;
   padding: 40px 8px;
-  color: white;
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -465,7 +480,7 @@ p {
 }
 
 .footer__content-item {
-  color: white;
+  color: #ffffff;
   font-family: "Roboto", sans-serif;
   padding: 24px 0 0;
 }
@@ -473,6 +488,12 @@ p {
 @media (min-width: 768px) {
   .footer__content-item {
     margin-right: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__content-item {
+    margin-right: 48px;
   }
 }
 
@@ -497,7 +518,7 @@ p {
 }
 
 .footer__content-email {
-  color: white;
+  color: #ffffff;
   padding-bottom: 20px;
   text-decoration: none;
   display: block;
