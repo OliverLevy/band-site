@@ -3,7 +3,7 @@
 
 h1{
   @include fonts();
-  font-size: 24px;
+  font-size: 26px;
   line-height: 32px;
 
   @include tablet(){
@@ -14,7 +14,7 @@ h1{
 
 h2{
   @include fonts();
-  font-size: 14px;
+  font-size: 17px;
   line-height: 22px;
 
   @include tablet(){
@@ -64,3 +64,13 @@ h5{
   line-height: 20px;
 }
 
+p{
+  @include fonts();
+  font-size: 12px;
+  line-height: 20px;
+
+  @include tablet{
+    font-size: 16px;
+    line-height: 28px;
+  }
+}

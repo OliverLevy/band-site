@@ -15,10 +15,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
+  height: 90px;
+
+  @include tablet{
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
 
   &__logo{
-    margin: 20px 0 10px;
+    padding: 20px 0 0;
+
+    @include tablet{
+      padding: 24px;
+    }
   }
 
   &__list{
@@ -26,6 +38,12 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
+
+    @include tablet{
+      width: 30%;
+      align-items: stretch;
+      height: 100%;
+    }
   }
 
   &__list-item{
@@ -33,7 +51,12 @@
     display: flex;
     justify-content: center;
     width: 50%;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
+
+    @include tablet{
+      align-items: center;
+      padding: 0;
+    }
 
     &--active{
       border-bottom: solid 5px white;
@@ -47,6 +70,7 @@
 
     &--active{
       color: white;
+      transform: translateY(2.5px);
     }
   }
 }
@@ -60,9 +84,19 @@
   align-items: center;
   justify-content: flex-start;
 
+  @include tablet{
+    height: 400px;
+  }
+
   &__text{
     color: white;
     margin: 16px;
+
+    @include tablet{
+      margin: 24px;
+      font-size: 80px;
+      line-height: 98px;
+    }
   }
 
 }
@@ -76,21 +110,172 @@
 
   margin: 16px;
 
+  @include tablet{
+    margin: 24px;
+  }
+
+  &__hero-title{
+    margin: 36px 0 24px;
+  }
+
   &__hero-img{
     width: 100%;
+  }
+
+  &__hero-text{
+    margin: 24px 0 40px;
+  }
+
+  &__hero-author{
+    margin-top: 32px;
+  }
+
+  &__article{
+    
+    @include tablet{
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  &__article-title{
+    margin: 32px 0 24px;
+  }
+
+  &__article-text{
+    margin: 0 0 40px;
+
+    @include tablet{
+      padding-right: 24px;
+      margin: 0;
+    }
   }
 }
 
 .gallery{
   margin: 16px;
 
-  &__items{
+  @include tablet{
+    margin: 24px;
+  }
 
+  &__title{
+    padding: 32px 0 24px;
+  }
+
+  &__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablet{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   &__img{
     width: 100%;
-    margin: 8px 0;
-    background: pink;
+    padding-bottom: 16px;
+
+    @include tablet{
+      // height: 126px;
+      width: calc((100% - 48px) / 3);
+      // min-width: 224px;
+      padding: 12px 0;
+    }
+  }
+}
+
+.footer{
+  background: $black;
+  padding: 40px 8px;
+  color: white;
+
+  @include tablet{
+    padding: 40px 24px;
+  }
+
+  &__item{
+    
+    @include tablet{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__social{
+
+    @include tablet{
+      display: flex;
+    }
+  }
+
+  &__logo{
+    display: none;
+
+    @include tablet{
+      display: block;
+      width: 120px;
+    }
+  }
+
+  &__text{
+  }
+
+  &__icon{
+    padding: 8px;
+
+    @include tablet{
+      margin-left: 50px;
+    }
+  }
+
+  &__icon-img{
+    margin-right: 32px;
+  }
+
+  &__content{
+
+    @include tablet{
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  &__content-item{
+    color: white;
+    font-family: $font;
+    padding: 24px 0;
+
+    @include tablet{
+      margin-right: 24px;
+    }
+  }
+
+  &__content-title{
+    padding-bottom: 20px;
+  }
+
+  &__content-info{
+    padding-bottom: 20px;
+  }
+
+  &__content-email{
+    color: white;
+    padding-bottom: 20px;
+    font-size: .8em;
+    text-decoration: none;
+  }
+
+  &__copyright{
+    font-size: .8em;
+
+    &--inline{
+
+      @include tablet{
+        display: none;
+      }
+    }
   }
 }
