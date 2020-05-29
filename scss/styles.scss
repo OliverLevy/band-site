@@ -22,6 +22,12 @@
   @include tablet{
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  @include desktop {
+    padding: 0 180px;
   }
 
 
@@ -29,7 +35,8 @@
     padding: 20px 0 0;
 
     @include tablet{
-      padding: 24px;
+      padding: 0;
+      margin-right: 56px;
     }
   }
 
@@ -56,6 +63,11 @@
     @include tablet{
       align-items: center;
       padding: 0;
+    }
+
+    @include desktop{
+      width: 80px;
+      margin: 0 56px 0 0;
     }
 
     &--active{
@@ -97,6 +109,10 @@
       font-size: 80px;
       line-height: 98px;
     }
+
+    @include desktop{
+      margin: 0 180px
+    }
   }
 
 }
@@ -114,16 +130,35 @@
     margin: 24px;
   }
 
+  @include desktop{
+    margin: 0 180px;
+  }
+
   &__hero-title{
     margin: 36px 0 24px;
   }
 
+  &__desktop-resize{
+    @include desktop{
+      width: 896px;
+      margin: 0 auto;
+    }
+  }
+
   &__hero-img{
     width: 100%;
+
+    @include desktop{
+      width: 896px;
+    }
   }
 
   &__hero-text{
     margin: 24px 0 40px;
+
+    @include desktop{
+      width: 896px;
+    }
   }
 
   &__hero-author{
@@ -136,6 +171,10 @@
       display: flex;
       width: 100%;
     }
+
+    // @include desktop{
+    //   width: 896px;
+    // }
   }
 
   &__article-title{
@@ -149,6 +188,11 @@
       padding-right: 24px;
       margin: 0;
     }
+
+    @include desktop{
+      padding-right: 40px;
+      width: 420px;
+    }
   }
 }
 
@@ -157,6 +201,10 @@
 
   @include tablet{
     margin: 24px;
+  }
+
+  @include desktop{
+    margin: 0 180px;
   }
 
   &__title{
@@ -196,6 +244,10 @@
     padding: 40px 24px;
   }
 
+  @include desktop{
+    padding: 48px 180px
+  }
+
   &__item{
     
     @include tablet{
@@ -232,7 +284,7 @@
   }
 
   &__icon-img{
-    margin-right: 32px;
+    margin: 0 16px;
   }
 
   &__content{
@@ -246,7 +298,7 @@
   &__content-item{
     color: white;
     font-family: $font;
-    padding: 24px 0;
+    padding: 24px 0 0;
 
     @include tablet{
       margin-right: 24px;
@@ -255,22 +307,33 @@
 
   &__content-title{
     padding-bottom: 20px;
+
+    @include tablet{
+      padding-bottom: 24px;
+    }
   }
 
   &__content-info{
     padding-bottom: 20px;
+
+    @include tablet{
+      padding-bottom: 24px;
+    }
   }
 
   &__content-email{
     color: white;
     padding-bottom: 20px;
-    font-size: .8em;
     text-decoration: none;
+    display: block;
+
+    @include tablet{
+      padding-bottom: 40px;
+    }
   }
 
   &__copyright{
-    font-size: .8em;
-
+    
     &--inline{
 
       @include tablet{
