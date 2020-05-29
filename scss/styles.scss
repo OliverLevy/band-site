@@ -235,9 +235,7 @@
     padding-bottom: 16px;
 
     @include tablet{
-      // height: 126px;
       width: calc((100% - 48px) / 3);
-      // min-width: 224px;
       padding: 12px 0;
     }
   }

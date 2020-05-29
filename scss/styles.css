@@ -6,91 +6,93 @@
 }
 
 html {
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
+  line-height: 16px;
 }
 
 h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 1.625rem;
+  line-height: 2rem;
 }
 
 @media (min-width: 768px) {
   h1 {
     font-size: 2.25rem;
-    line-height: 44px;
+    line-height: 2.75rem;
     font-weight: 700;
   }
 }
 
 h2 {
   font-family: "Roboto", sans-serif;
-  font-size: 17px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.375rem;
 }
 
 @media (min-width: 768px) {
   h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: .875rem;
+  line-height: 1.375rem;
 }
 
 @media (min-width: 768px) {
   h3 {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
 h4 {
   font-family: "Roboto", sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: .8125rem;
+  line-height: 1.125rem;
 }
 
 @media (min-width: 768px) {
   h4 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: .875rem;
+    line-height: 1.375rem;
   }
 }
 
 .h4--list-contact {
   font-family: "Roboto", sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: .8125rem;
+  line-height: 1.125rem;
 }
 
 @media (min-width: 768px) {
   .h4--list-contact {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: .875rem;
+    line-height: 1.25rem;
   }
 }
 
 h5 {
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: .75rem;
+  line-height: 1.25rem;
 }
 
 p {
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: .75rem;
+  line-height: 1.25rem;
 }
 
 @media (min-width: 768px) {
   p {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1rem;
+    line-height: 1.75rem;
   }
 }
 
