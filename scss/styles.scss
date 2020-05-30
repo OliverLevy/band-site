@@ -76,9 +76,8 @@
   }
 
   &__list-item-anchor{
-    color: grey;
+    color: $nav-static-color;
     text-decoration: none;
-    font-family: $font;
     font-weight: 500;
 
     &--active{
@@ -107,8 +106,7 @@
 
     @include tablet{
       margin: 24px;
-      font-size: 80px;
-      line-height: 98px;
+      @include hero-header;
     }
 
     @include desktop{
@@ -118,10 +116,6 @@
 
 }
 
-.main{
-  font-family: $font;
-  color: $black;
-}
 
 .about{
 
@@ -148,18 +142,10 @@
 
   &__hero-img{
     width: 100%;
-
-    @include desktop{
-      width: 896px;
-    }
   }
 
   &__hero-text{
     margin: 24px 0 40px;
-
-    @include desktop{
-      width: 896px;
-    }
   }
 
   &__hero-author{
@@ -179,11 +165,11 @@
   }
 
   &__article-title{
-    margin: 32px 0 24px;
+    margin: 40px 0 24px;
   }
 
   &__article-text{
-    margin: 0 0 40px;
+    margin: 0 0 24px;
 
     @include tablet{
       padding-right: 24px;
@@ -196,26 +182,29 @@
       padding-bottom: 48px;
     }
   }
+
+  &__article-margin{
+    margin: 40px 0;
+  }
 }
 
 .gallery{
-  padding: 16px;
+  padding: 0 16px;
   background: $offwhite;
 
   @include tablet{
-    padding: 24px;
+    padding: 0 24px;
   }
 
   @include desktop{
-    padding: 48px 180px;
+    padding: 0 180px;
   }
 
   &__title{
     padding: 32px 0 24px;
 
-    @include desktop{
-      margin-bottom: 40px;
-      padding: 0;
+    @include tablet{
+      padding: 48px 0 52px;
     }
   }
 
@@ -259,6 +248,8 @@
     @include tablet{
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
     }
   }
 
@@ -266,6 +257,7 @@
 
     @include tablet{
       display: flex;
+      align-items: center;
     }
   }
 
@@ -278,8 +270,9 @@
     }
   }
 
-  // &__text{
-  // }
+  &__text{
+    font-size: 2.5rem;
+  }
 
   &__icon{
     padding: 8px;
@@ -290,7 +283,11 @@
   }
 
   &__icon-img{
-    margin: 0 16px;
+    margin: 0 32px 0 0;
+
+    @include tablet {
+      margin: 0 16px;
+    }
   }
 
   &__content{
@@ -302,12 +299,10 @@
   }
 
   &__content-item{
-    color: $white;
-    font-family: $font;
     padding: 24px 0 0;
 
     @include tablet{
-      margin-right: 24px;
+      margin-right: 21px;
     }
 
     @include desktop{
@@ -336,16 +331,16 @@
     padding-bottom: 20px;
     text-decoration: none;
     display: block;
+    font-size: .8125rem;
 
     @include tablet{
       padding-bottom: 40px;
+      font-size: .875rem;
     }
   }
 
   &__copyright{
-    
     &--inline{
-
       @include tablet{
         display: none;
       }

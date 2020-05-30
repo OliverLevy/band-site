@@ -1,8 +1,7 @@
-@mixin fonts {
-  font-family: $font;
-  // color: $black;
-}
+// mixins
 
+
+// media query mixins
 @mixin tablet {
   @media (min-width:768px){
     @content;
