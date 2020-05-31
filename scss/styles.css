@@ -371,7 +371,7 @@ p {
 
 @media (min-width: 768px) {
   .bio-figure__author {
-    margin-top: 2.5rem;
+    padding-top: 2.5rem;
   }
 }
 
@@ -425,9 +425,14 @@ p {
   }
 }
 
+.bio__text {
+  padding-top: 1.5rem;
+}
+
 @media (min-width: 768px) {
   .bio__text {
     width: calc(50% - 1.5rem);
+    padding-top: 2rem;
   }
 }
 
@@ -498,7 +503,7 @@ p {
 
 .footer {
   background: #323232;
-  padding: 3rem .5px;
+  padding: 3rem .5rem;
   color: #ffffff;
 }
 

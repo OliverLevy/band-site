@@ -170,7 +170,7 @@
     padding-top: 2rem;
 
     @include tablet{
-      margin-top: 2.5rem;
+      padding-top: 2.5rem;
     }
   }
 }
@@ -212,9 +212,11 @@
   }
 
   &__text{
+    padding-top: 1.5rem;
 
     @include tablet{
       width: calc(50% - 1.5rem);
+      padding-top: 2rem;
     }
 
     @include desktop{
@@ -266,7 +268,7 @@
 
 .footer{
   background: $black;
-  padding: 3rem .5px;
+  padding: 3rem .5rem;
   color: $white;
 
   @include tablet{
