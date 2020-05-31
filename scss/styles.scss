@@ -266,11 +266,11 @@
 
 .footer{
   background: $black;
-  padding: 40px 8px;
+  padding: 48px 8px;
   color: $white;
 
   @include tablet{
-    padding: 40px 24px;
+    padding: 48px 24px;
   }
 
   @include desktop{
@@ -283,7 +283,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 56px;
     }
   }
 
@@ -309,18 +309,20 @@
   }
 
   &__icon{
-    padding: 8px;
+    // background: pink;
+    padding: 32px 0;
 
     @include tablet{
       margin-left: 50px;
+      padding: 0;
     }
   }
 
   &__icon-img{
-    margin: 0 32px 0 0;
+    padding: 0 16px;
 
     @include tablet {
-      margin: 0 16px;
+      padding: 0 16px;
     }
   }
 
@@ -333,7 +335,6 @@
   }
 
   &__content-item{
-    padding: 24px 0 0;
 
     @include tablet{
       margin-right: 21px;
@@ -345,7 +346,7 @@
   }
 
   &__content-title{
-    padding-bottom: 20px;
+    padding-bottom: 24px;
 
     @include tablet{
       padding-bottom: 24px;
@@ -353,7 +354,7 @@
   }
 
   &__content-info{
-    padding-bottom: 20px;
+    padding-bottom: 24px;
 
     @include tablet{
       padding-bottom: 24px;
@@ -362,7 +363,7 @@
 
   &__content-email{
     color: $white;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     text-decoration: none;
     display: block;
     font-size: .8125rem;
@@ -374,8 +375,7 @@
   }
 
   &__copyright{
-    margin-top: 24px;
-
+    
     @include tablet{
       margin-top: 0;
     }
