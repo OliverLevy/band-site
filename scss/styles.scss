@@ -5,11 +5,6 @@
 
 
 
-// fontz yall
-
-
-
-
 .header{
   background-color: $black;
   display: flex;
@@ -23,7 +18,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 24px;
+    padding: 0 1.5rem;
   }
 
   @include desktop {
@@ -99,7 +94,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  
 
   @include tablet{
     height: 400px;
@@ -112,110 +106,139 @@
 
   &__text{
     color: $white;
-    margin: 16px;
-    z-index: 2;
+    padding: 16px;
 
     @include tablet{
-      margin: 24px;
+      padding: 24px;
       @include hero-header;
     }
 
     @include desktop{
-      margin: 0 180px
+      padding: 0 180px
     }
   }
 
 }
 
-
-.about{
-
-  margin: 16px;
+.bio-figure{
+  padding: 0 1rem 2.5rem;
 
   @include tablet{
-    margin: 24px;
+    padding: 0 2rem 3.5rem;
   }
 
   @include desktop{
-    margin: 0 180px;
+    padding: 0 11.25rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 
-  &__hero-title{
-    margin: 36px 0 24px;
-  }
-
-  &__desktop-resize{
+  &__container{
     @include desktop{
-      width: 896px;
-      margin: 0 auto;
+    max-width: 896px;
     }
   }
 
-  &__hero-img{
+  &__title{
+    
+    padding: 2rem 1rem 1.5rem;
+
+    @include tablet{
+      padding: 2rem 2rem 1.5rem;
+    }
+
+    @include desktop{
+      padding: 3rem 11.25rem 3rem;
+    }
+  }
+
+  &__img{
     width: 100%;
   }
 
-  &__hero-text{
-    margin: 24px 0 40px;
+  &__text{
+    padding-top: 24px;
+
+    @include tablet{
+      padding-top: 3rem;
+    }
   }
 
-  &__hero-author{
-    margin-top: 32px;
+  &__author{
+    padding-top: 2rem;
+
+    @include tablet{
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.bio{
+  padding: 0 1rem 2.5rem;
+
+  @include tablet{
+    padding: 0 2rem 3rem;
+  }
+
+  @include desktop{
+    padding: 0 11.25rem 3rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__container{
+    @include desktop{
+      max-width: 896px;
+    }
   }
 
   &__article{
     
     @include tablet{
       display: flex;
+      justify-content: space-between;
       width: 100%;
     }
-
-    // @include desktop{
-    //   width: 896px;
-    // }
   }
 
-  &__article-title{
-    margin: 40px 0 24px;
+  &__title{
+
+    @include desktop{
+      padding-bottom: 32px;
+    }
   }
 
-  &__article-text{
-    margin: 0 0 24px;
+  &__text{
 
     @include tablet{
-      padding-right: 24px;
-      margin: 0;
+      width: calc(50% - 1.5rem);
     }
 
     @include desktop{
-      padding-right: 40px;
-      width: 420px;
-      padding-bottom: 48px;
+      width: calc(50% - 2.5rem);
     }
-  }
-
-  &__article-margin{
-    margin: 40px 0;
   }
 }
 
 .gallery{
-  padding: 0 16px;
+  padding: 2rem 1rem 2.5rem;
   background: $offwhite;
 
   @include tablet{
-    padding: 0 24px;
+    padding: 3rem 1.5rem 2.5rem;
   }
 
   @include desktop{
-    padding: 0 180px;
+    padding: 3rem 11.25rem 2.5rem;
   }
 
   &__title{
-    padding: 32px 0 24px;
 
     @include tablet{
-      padding: 48px 0 52px;
+      padding-bottom: 4rem;
     }
   }
 
@@ -232,10 +255,10 @@
 
   &__img{
     width: 100%;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 
     @include tablet{
-      width: calc((100% - 48px) / 3);
+      width: calc((100% - 3rem) / 3);
       padding: 12px 0;
     }
   }

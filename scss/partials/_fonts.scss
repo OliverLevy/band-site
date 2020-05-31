@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixin";
 
+/*===sets rem value to 16px with font-size===*/
 html{
   font-family: $font;
   font-size: 16px;
