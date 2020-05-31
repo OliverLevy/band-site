@@ -266,15 +266,15 @@
 
 .footer{
   background: $black;
-  padding: 48px 8px;
+  padding: 3rem .5px;
   color: $white;
 
   @include tablet{
-    padding: 48px 24px;
+    padding: 3rem 1.5rem;
   }
 
   @include desktop{
-    padding: 48px 180px
+    padding: 3rem 11.25rem;
   }
 
   &__item{
@@ -283,7 +283,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 56px;
+      margin-bottom: 3.5rem;
     }
   }
 
@@ -310,7 +310,7 @@
 
   &__icon{
     // background: pink;
-    padding: 32px 0;
+    padding: 2rem 0;
 
     @include tablet{
       margin-left: 50px;
@@ -319,10 +319,10 @@
   }
 
   &__icon-img{
-    padding: 0 16px;
+    padding: 0 1rem;
 
     @include tablet {
-      padding: 0 16px;
+      padding: 0 1rem;
     }
   }
 
@@ -346,30 +346,21 @@
   }
 
   &__content-title{
-    padding-bottom: 24px;
-
-    @include tablet{
-      padding-bottom: 24px;
-    }
+    padding-bottom: 1.5rem;
   }
 
   &__content-info{
-    padding-bottom: 24px;
-
-    @include tablet{
-      padding-bottom: 24px;
-    }
+    padding-bottom: 1.5rem;
   }
 
   &__content-email{
     color: $white;
-    padding-bottom: 40px;
+    padding-bottom: 2.5rem;
     text-decoration: none;
     display: block;
     font-size: .8125rem;
 
     @include tablet{
-      padding-bottom: 40px;
       font-size: .875rem;
     }
   }
