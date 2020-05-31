@@ -254,7 +254,8 @@ p {
 }
 
 .hero {
-  background-image: url(/Assets/Images/hero.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.5)), to(#323232)), url(/Assets/Images/austin-neill-hgO1wFPXl3I.jpg);
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), #323232), url(/Assets/Images/austin-neill-hgO1wFPXl3I.jpg);
   background-position: center;
   background-size: cover;
   height: 183px;
@@ -275,9 +276,17 @@ p {
   }
 }
 
+@media (min-width: 1200px) {
+  .hero {
+    height: 670px;
+    width: 100%;
+  }
+}
+
 .hero__text {
   color: #ffffff;
   margin: 16px;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -570,6 +579,16 @@ p {
   .footer__content-email {
     padding-bottom: 40px;
     font-size: .875rem;
+  }
+}
+
+.footer__copyright {
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .footer__copyright {
+    margin-top: 0;
   }
 }
 

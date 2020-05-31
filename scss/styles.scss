@@ -87,22 +87,33 @@
   }
 }
 
+
+
 .hero{
-  background-image: url(/Assets/Images/hero.jpg);
+  background-image: 
+  linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,01)),
+  url(/Assets/Images/austin-neill-hgO1wFPXl3I.jpg);
   background-position: center;
   background-size: cover;
   height: 183px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  
 
   @include tablet{
     height: 400px;
   }
 
+  @include desktop{
+    height: 670px;
+    width: 100%;
+  }
+
   &__text{
     color: $white;
     margin: 16px;
+    z-index: 2;
 
     @include tablet{
       margin: 24px;
@@ -340,6 +351,11 @@
   }
 
   &__copyright{
+    margin-top: 24px;
+
+    @include tablet{
+      margin-top: 0;
+    }
     &--inline{
       @include tablet{
         display: none;
