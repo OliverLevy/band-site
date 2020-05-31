@@ -246,6 +246,12 @@ p {
   color: #AFAFAF;
   text-decoration: none;
   font-weight: 500;
+  -webkit-transition: letter-spacing .2s;
+  transition: letter-spacing .2s;
+}
+
+.header__list-item-anchor:hover {
+  letter-spacing: 1.2px;
 }
 
 .header__list-item-anchor--active {
@@ -498,6 +504,17 @@ p {
   .gallery__img {
     width: calc((100% - 3rem) / 3);
     padding: 12px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery__img {
+    opacity: .5;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+  }
+  .gallery__img:hover {
+    opacity: 1;
   }
 }
 
