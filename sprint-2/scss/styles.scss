@@ -71,7 +71,7 @@
   }
 
   &__list-item-anchor{
-    color: $nav-static-color;
+    color: $silver;
     text-decoration: none;
     font-weight: 500;
     transition: letter-spacing .2s;
@@ -281,6 +281,116 @@
     }
   }
 }
+
+.comment{
+  padding: 2rem 1rem;
+  max-width: 528px;
+
+  &__container{
+    padding: 2.5rem 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__img-circle{
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+    background-image: url(/Assets/Images/Mohan-muruge.jpg);
+    background-position: left;
+    background-size: cover;
+    position: relative;
+    top: 28px;
+  }
+
+  &__add{
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+    width: calc(100% - 68px);
+  }
+
+  &__add-name{
+    padding-left: 1rem;
+    margin: .5rem 0 1.5rem;
+    height: 48px;
+    border: 2px solid $silver;
+    border-radius: 4px;
+    background: #e1e1e1;
+    color: black;
+
+    &::placeholder{
+      color: black;
+    }
+
+    &:focus{
+      outline: none;
+      border: 2px solid black;
+    }
+  }
+
+  &__add-comment{
+    padding: 1rem;
+    margin: .5rem 0 1.5rem;
+    height: 96px;
+    resize: none;
+    font-family: $font;
+    border: 2px solid $silver;
+    border-radius: 4px;
+    background: #e1e1e1;
+
+    &::placeholder{
+      color: black;
+    }
+
+    &:focus{
+      outline: none;
+      border: 2px solid black;
+    }
+  }
+
+  &__add-btn{
+    height: 48px;
+  }
+}
+
+.divider{
+  background: #004892;
+  width: 100%;
+  height: 1px;
+}
+
+.btn{
+  background: $black;
+  color: $white;
+  font-weight: 600;
+  border-radius: 4px;
+  border: none;
+
+  &:hover{
+    background: black;
+  }
+
+  &:focus{
+    outline: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer{
   background: $black;
