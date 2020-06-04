@@ -1,40 +1,4 @@
-console.log("hello world")
-
-let user1 = {
-  name: "Oliver Levy",
-  comment: "wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-  dateAdded: "12/05/2020"
-};
-
-console.log(user1['name'])
-
-let user2 = {
-  name: "Simone Ades",
-  comment: "OMG WOWOWOW! I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-  dateAdded: "12/05/2020"
-};
-
-let user3 = {
-  name: "Bill Whatshisname",
-  comment: "I've seen better. Wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-  dateAdded: "12/05/2020"
-};
-
-let testArray = [user1, user2, user3]
-
-console.log(testArray[1]);
-console.log(testArray.length);
-
-function addNewComment(){
-  for(let i = 0; i < testArray.length; i++){
-    console.log(testArray[i]["name"]);
-    console.log(testArray[i]["comment"]);
-    console.log(testArray[i]["dateAdded"]);
-  }
-}
-
-console.log(addNewComment())
-
+// hello world
 
 function writeComment(name, date, text){
 // content is found first
@@ -81,8 +45,6 @@ previousCommentInfo.className = "previous-comment__info";
 previousCommentInfo.appendChild(previousCommentInfoContainer);
 previousCommentInfo.appendChild(previousCommentText);
 
-// it works!
-// console.log(previousCommentInfo)
 
 // create img placeholder
 let previousCommentImgCircle = document.createElement("div");
@@ -96,9 +58,6 @@ previousComment.className = "previous-comment";
 previousComment.appendChild(previousCommentImgCircle);
 previousComment.appendChild(previousCommentInfo);
 
-// so far so good!
-// console.log(previousComment);
-
 // create commentCard section
 
 let commentCard = document.createElement("section");
@@ -108,28 +67,73 @@ commentCard.className = "comment-card";
 commentCard.appendChild(previousComment);
 commentCard.appendChild(divider);
 
-// still working omg can't believe it
-// console.log(commentCard)
-
-// final parent lol probably could have built this differently
-let commentParent = document.getElementById("comments");
-
-commentParent.prepend(commentCard);
-
-// console.log(commentParent)
+document.getElementById("comments").prepend(commentCard);
 }
 
+// this populates the function above that creates all the sections and appends them to the correct parents
+// writeComment(user1['name'], user1['dateAdded'], user1['comment']);
 
-writeComment(user1['name'], user1['dateAdded'], user1['comment']);
+// writeComment(user1['name'], user1['dateAdded'], user1['comment']);
+
+let user1 = {
+  name: "Oliver Levy",
+  comment: "wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
+  dateAdded: "12/05/2020"
+};
+
+// console.log(user1['name'])
+
+let user2 = {
+  name: "Simone Ades",
+  comment: "OMG WOWOWOW! I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
+  dateAdded: "12/05/2020"
+};
+
+let user3 = {
+  name: "Bill Whatshisname",
+  comment: "I've seen better. Wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
+  dateAdded: "12/05/2020"
+};
+
+let users = [user1, user2, user3]
+
+
+function addNewComment(){
+  for(let i = 0; i < users.length; i++){
+    writeComment(users[i]["name"], users[i]["dateAdded"],users[i]["comment"])
+  }
+}
+addNewComment();
 
 
 
 
+// figures out current time
+let d = new Date();
+// get time
+let hours = d.getHours();
+let minutes = d.getMinutes();
+let seconds = d.getSeconds();
+let time = (`${hours}:${minutes}:${seconds}`)
+// get date
+let day = d.getDate();
+let month = (d.getMonth() + 1);
+let year = d.getFullYear();
+let date = (`${month}/${day}/${year}`);
+// assign date and time to hidden form element
+document.getElementById("current-date").value = date;
+document.getElementById("current-time").value = time;
 
 
+// submit values to "writeComment" function
+let form = document.querySelector(".comment__add");
 
+function submissionHandler(event){
+  event.preventDefault();
+  writeComment(event.target.userName.value, event.target.date.value, event.target.comment.value)
+  event.target.reset();
+}
 
-
-
-
-
+form.onsubmit = function(event){
+  submissionHandler(event);
+}

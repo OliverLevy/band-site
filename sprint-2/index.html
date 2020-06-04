@@ -65,13 +65,19 @@
       <section class="comment__container">
         <div class="comment__img-circle">
         </div>
+
+
         <form class="comment__add">
-          <h5>NAME</h5>
-          <input type="text" name="name" id="name" class="comment__add-name" placeholder="Enter your name" >
-          <h5>COMMENT</h5>
+          <label for="name"><h5>NAME</h5></label>
+          <input type="text" name="userName" id="name" class="comment__add-name" placeholder="Enter your name" >
+          <label for="comment"><h5>COMMENT</h5></label>
           <textarea type="text" name="comment" id="comment" class="comment__add-comment" placeholder="Add a new comment"></textarea>
+          <input type="hidden" name="date" value="currentDate" id="current-date">
+          <input type="hidden" name="time" value="currentTime" id="current-time">
           <button class="btn comment__add-btn" id="btn comment__add-btn">COMMENT</button>
         </form>
+
+
       </section>
       <div class="divider"></div>
     </section>
