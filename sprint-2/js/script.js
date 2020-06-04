@@ -1,24 +1,39 @@
 console.log("hello world")
 
-// let user1 = {
-//   name: "Oliver Levy",
-//   comment: "wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-//   dateAded: "12/05/2020"
-// };
+let user1 = {
+  name: "Oliver Levy",
+  comment: "wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
+  dateAdded: "12/05/2020"
+};
 
-// let user2 = {
-//   name: "Simone Ades",
-//   comment: "OMG WOWOWOW! I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-//   dateAded: "12/05/2020"
-// };
+console.log(user1['name'])
 
-// let user3 = {
-//   name: "Bill Whatshisname",
-//   comment: "I've seen better. Wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-//   dateAded: "12/05/2020"
-// };
+let user2 = {
+  name: "Simone Ades",
+  comment: "OMG WOWOWOW! I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
+  dateAdded: "12/05/2020"
+};
 
+let user3 = {
+  name: "Bill Whatshisname",
+  comment: "I've seen better. Wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
+  dateAdded: "12/05/2020"
+};
 
+let testArray = [user1, user2, user3]
+
+console.log(testArray[1]);
+console.log(testArray.length);
+
+function addNewComment(){
+  for(let i = 0; i < testArray.length; i++){
+    console.log(testArray[i]["name"]);
+    console.log(testArray[i]["comment"]);
+    console.log(testArray[i]["dateAdded"]);
+  }
+}
+
+console.log(addNewComment())
 
 
 function writeComment(name, date, text){
@@ -94,24 +109,22 @@ commentCard.appendChild(previousComment);
 commentCard.appendChild(divider);
 
 // still working omg can't believe it
-console.log(commentCard)
+// console.log(commentCard)
 
 // final parent lol probably could have built this differently
 let commentParent = document.getElementById("comments");
 
 commentParent.prepend(commentCard);
 
-console.log(commentParent)
+// console.log(commentParent)
 }
 
 
-writeComment("oliver Levy", "12/12/2020", "a really long string of text would go here");
+writeComment(user1['name'], user1['dateAdded'], user1['comment']);
 
-writeComment("oliver Levy", "12/12/2020", "a really long string of text would go here");
 
-writeComment("Simone Ades", "2/01/2020", "I love dogs. not sure who this band is but I thought you might want to know that I like dogs...   I LIKE DOGS!");
 
-writeComment("oliver Levy", "12/12/2020", "a really long string of text would go here");
+
 
 
 
