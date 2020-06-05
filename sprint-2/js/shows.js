@@ -43,7 +43,36 @@ let shows = [show1, show2, show3, show4, show5, show6]
 console.log(shows)
 
 
+
 // create elements
+
+let showsItem = document.createElement("section")
+showsItem.className = "shows__item"
+
+function makeHeader(){
+  let showItemHeader = document.createElement("h5");
+  showItemHeader.className = "shows__item-header"
+}
+
+function makeInfoBold(){
+  showsItemInfo.className = " shows__item-info--bold"
+}
+
+function makeInfo(){
+  let showsItemInfo = document.createElement("p");
+  showsItemInfo.className = "shows__item-info"
+}
+
+
+let showsBtn = document.createElement("button")
+showsBtn.className = "btn comment__add-btn shows__btn"
+
+let divider = document.createElement("div")
+divider.className = "divider";
+
+function makeItem(){
+
+}
 
 
 // create textnode to go within those elements
