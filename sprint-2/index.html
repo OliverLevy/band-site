@@ -12,11 +12,11 @@
     <a href="/index.html"><img src="/Assets/Logo/Logo-bandsite.svg"  class="header__logo" alt=""></a>
     <ul class="header__list">
       <li class="header__list-item header__list-item--active"><a href="/index.html" class="header__list-item-anchor header__list-item-anchor--active">Biography</a></li>
-      <li class="header__list-item"><a href="#" class="header__list-item-anchor">Shows</a></li>
+      <li class="header__list-item"><a href="/Pages/shows.html" class="header__list-item-anchor">Shows</a></li>
     </ul>
   </header>
   <main>
-    <section class="hero">
+    <section class="hero bio-hero">
       <h1 class="hero__text">Gaspard Auge &<br> Xavier de Rosnay</h1>
     </section>
 
@@ -69,9 +69,9 @@
 
         <form class="comment__add">
           <label for="name"><h5>NAME</h5></label>
-          <input type="text" name="userName" id="name" class="comment__add-name" placeholder="Enter your name" >
+          <input type="text" name="userName" id="name" class="comment__add-name" placeholder="Enter your name" required>
           <label for="comment"><h5>COMMENT</h5></label>
-          <textarea type="text" name="comment" id="comment" class="comment__add-comment" placeholder="Add a new comment"></textarea>
+          <textarea type="text" name="comment" id="comment" class="comment__add-comment" placeholder="Add a new comment" required></textarea>
           <input type="hidden" name="date" value="currentDate" id="current-date">
           <input type="hidden" name="time" value="currentTime" id="current-time">
           <button class="btn comment__add-btn" id="btn comment__add-btn">COMMENT</button>
@@ -123,6 +123,6 @@
       <p>Copyright The Bees Knees © 2018 <br class="footer__copyright--inline">All Rights Reserved</p>
     </section>
   </footer>
-<script src="/js/script.js"></script>
+<script src="/js/bio.js"></script>
 </body>
 </html>

@@ -88,18 +88,46 @@
   }
 }
 
-
-
-.hero{
+.bio-hero{
   background-image: 
-  linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,01)),
+  linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)),
   url(/Assets/Images/austin-neill-hgO1wFPXl3I.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 183px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  height: 183px;
+}
+
+.shows-hero{
+  background-image: 
+  linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)),
+  url(/Assets/Images/Mohan-muruge.jpg);
+  display: flex;
+  flex-direction: column;
+  height: 472px;
+  // justify-content: space-between;
+  // width: 100%;
+
+  &__text-container{
+    padding: 64px 0;
+  }
+}
+
+.hero{
+  background-position: center;
+  background-size: cover;
+  padding: 1rem;
+
+  @include tablet{
+    padding: 2rem;
+    @include hero-header;
+  }
+
+  @include desktop{
+    padding: 0 111.25rem;
+  }
+  
+  
 
   @include tablet{
     height: 400px;
@@ -112,16 +140,7 @@
 
   &__text{
     color: $white;
-    padding: 16px;
-
-    @include tablet{
-      padding: 24px;
-      @include hero-header;
-    }
-
-    @include desktop{
-      padding: 0 180px
-    }
+    padding: .5rem
   }
 
 }
@@ -409,6 +428,31 @@
     padding-bottom: 2rem;
   }
   
+}
+
+.shows{
+  padding: 1.5rem 1rem;
+  width: 100%;
+
+  &__item{
+    padding: 2.5rem 0 0;
+  }
+
+  &__item-header{
+    padding-bottom: 1rem;
+  }
+
+  &__item-info{
+    padding-bottom: 1.5rem;
+    &--bold{
+      font-weight: bold;
+    }
+  }
+
+  &__btn{
+    width: 100%;
+    margin: 1rem 0 1rem;
+  }
 }
 
 

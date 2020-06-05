@@ -1,10 +1,12 @@
 // hello world
 
-function writeComment(name, date, text){
+function displayComment(test){
 // content is found first
-let nameInput = document.createTextNode(name);
-let dateInput = document.createTextNode(date);
-let textInput = document.createTextNode(text);
+
+let nameInput = document.createTextNode(test.name);
+let dateInput = document.createTextNode(test.dateAdded);
+let textInput = document.createTextNode(test.comment);
+
 
 // create line divider but we'll only use this at the end
 let divider = document.createElement("div");
@@ -71,14 +73,14 @@ document.getElementById("comments").prepend(commentCard);
 }
 
 // this populates the function above that creates all the sections and appends them to the correct parents
-// writeComment(user1['name'], user1['dateAdded'], user1['comment']);
+// displayComment(user1['name'], user1['dateAdded'], user1['comment']);
 
-// writeComment(user1['name'], user1['dateAdded'], user1['comment']);
+// displayComment(user1['name'], user1['dateAdded'], user1['comment']);
 
 let user1 = {
   name: "Oliver Levy",
   comment: "wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-  dateAdded: "12/05/2020"
+  dateAdded: "04/05/2000"
 };
 
 // console.log(user1['name'])
@@ -86,7 +88,7 @@ let user1 = {
 let user2 = {
   name: "Simone Ades",
   comment: "OMG WOWOWOW! I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-  dateAdded: "12/05/2020"
+  dateAdded: "02/05/2010"
 };
 
 let user3 = {
@@ -98,12 +100,12 @@ let user3 = {
 let users = [user1, user2, user3]
 
 
-function addNewComment(){
+function addNewComment(array){
   for(let i = 0; i < users.length; i++){
-    writeComment(users[i]["name"], users[i]["dateAdded"],users[i]["comment"])
+    displayComment(array[i])
   }
 }
-addNewComment();
+addNewComment(users);
 
 
 
@@ -125,13 +127,24 @@ document.getElementById("current-date").value = date;
 document.getElementById("current-time").value = time;
 
 
-// submit values to "writeComment" function
+// submit values to "displayComment" function
 let form = document.querySelector(".comment__add");
 
 function submissionHandler(event){
   event.preventDefault();
-  writeComment(event.target.userName.value, event.target.date.value, event.target.comment.value)
-  event.target.reset();
+  let newUser = {
+    name: event.target.userName.value,
+    comment: event.target.comment.value,
+    dateAdded: event.target.date.value
+  }
+  if (newUser.name === "" || newUser.comment === ""){
+    return;
+  } else {
+    users.push(newUser);
+    displayComment(newUser);
+    event.target.reset();
+  }
+  
 }
 
 form.onsubmit = function(event){

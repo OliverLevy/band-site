@@ -261,12 +261,9 @@ p {
           transform: translateY(2.5px);
 }
 
-.hero {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.5)), to(#323232)), url(/Assets/Images/austin-neill-hgO1wFPXl3I.jpg);
-  background-image: linear-gradient(rgba(50, 50, 50, 0.5), #323232), url(/Assets/Images/austin-neill-hgO1wFPXl3I.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 183px;
+.bio-hero {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.5)), to(rgba(50, 50, 50, 0.5))), url(/Assets/Images/austin-neill-hgO1wFPXl3I.jpg);
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/Assets/Images/austin-neill-hgO1wFPXl3I.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,6 +273,44 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  height: 183px;
+}
+
+.shows-hero {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.5)), to(rgba(50, 50, 50, 0.5))), url(/Assets/Images/Mohan-muruge.jpg);
+  background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/Assets/Images/Mohan-muruge.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 472px;
+}
+
+.shows-hero__text-container {
+  padding: 64px 0;
+}
+
+.hero {
+  background-position: center;
+  background-size: cover;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 2rem;
+    font-size: 3.75rem;
+    line-height: 5.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding: 0 111.25rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -293,21 +328,7 @@ p {
 
 .hero__text {
   color: #ffffff;
-  padding: 16px;
-}
-
-@media (min-width: 768px) {
-  .hero__text {
-    padding: 24px;
-    font-size: 3.75rem;
-    line-height: 5.5rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero__text {
-    padding: 0 180px;
-  }
+  padding: .5rem;
 }
 
 .bio-figure {
@@ -687,6 +708,32 @@ p {
 
 .previous-comment__text {
   padding-bottom: 2rem;
+}
+
+.shows {
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+.shows__item {
+  padding: 2.5rem 0 0;
+}
+
+.shows__item-header {
+  padding-bottom: 1rem;
+}
+
+.shows__item-info {
+  padding-bottom: 1.5rem;
+}
+
+.shows__item-info--bold {
+  font-weight: bold;
+}
+
+.shows__btn {
+  width: 100%;
+  margin: 1rem 0 1rem;
 }
 
 .footer {
