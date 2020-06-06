@@ -436,17 +436,54 @@
   width: 100%;
 
   &__card{
-    width: 804px;
+
+
+    @include tablet{
+      
+    }
+
+    @include desktop{
+      width: 804px;
+    }
+    
+  }
+
+  &__date-div{
+    width: 35%;
+  }
+
+  &__venue-div{
+    width: 20%;
+  }
+
+  &__location-div{
+    width: 20%;
   }
 
   &__item{
     padding: 2.5rem 0 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    @include tablet{
+      padding: 1rem 0;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__item-header{
     padding-bottom: 1rem;
+
+    @include tablet {
+      display: none;
+
+      &--show-me{
+        display: block;
+      }
+      
+    }
   }
 
   &__item-info{
@@ -454,14 +491,19 @@
     &--bold{
       font-weight: bold;
     }
+
+    @include tablet{
+      padding-bottom: 0;
+    }
   }
 
   &__btn{
     width: 100%;
     margin: 1rem 0 1rem;
     
-    @include desktop{
+    @include tablet{
       width: 160px;
+      margin: 0;
     }
   }
 }

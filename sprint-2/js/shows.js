@@ -146,7 +146,15 @@ pullInfo(shows)
 
 
 
+// add class to first three
+let findFirst = document.querySelector(".shows__item")
+let firstHeaders = findFirst.getElementsByClassName("shows__item-header");
 
+function addClass(arr){
+  for(let i = 0; i < arr.length; i++){
+    arr[i].classList.add("shows__item-header--show-me")
+  }
+}
 
-
+addClass(firstHeaders);
 

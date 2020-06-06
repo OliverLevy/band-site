@@ -715,8 +715,22 @@ p {
   width: 100%;
 }
 
-.shows__card {
-  width: 804px;
+@media (min-width: 1200px) {
+  .shows__card {
+    width: 804px;
+  }
+}
+
+.shows__date-div {
+  width: 35%;
+}
+
+.shows__venue-div {
+  width: 20%;
+}
+
+.shows__location-div {
+  width: 20%;
 }
 
 .shows__item {
@@ -724,13 +738,39 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .shows__item {
+    padding: 1rem 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .shows__item-header {
   padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .shows__item-header {
+    display: none;
+  }
+  .shows__item-header--show-me {
+    display: block;
+  }
 }
 
 .shows__item-info {
@@ -741,14 +781,21 @@ p {
   font-weight: bold;
 }
 
+@media (min-width: 768px) {
+  .shows__item-info {
+    padding-bottom: 0;
+  }
+}
+
 .shows__btn {
   width: 100%;
   margin: 1rem 0 1rem;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .shows__btn {
     width: 160px;
+    margin: 0;
   }
 }
 
