@@ -1,7 +1,7 @@
 // Makes the "Shows" table
 
 
-// create array of objects for all the shows
+// array of objects for all the shows
 let show1 = {
   date: "Mon Dec 17 2018",
   venue: "Ronald Lane",
@@ -40,9 +40,8 @@ let show6 = {
 
 let shows = [show1, show2, show3, show4, show5, show6]
 
-console.log(shows)
 
-
+// functions to shorten my code
 function makeHeader(header){
   let showsItemHeader = document.createElement("h5");
   showsItemHeader.className = "shows__item-header";
@@ -76,8 +75,15 @@ function makeInfo(info){
 
 let showsSection = document.getElementById("shows")
 
+let showsHeader = document.createElement("h1");
+showsHeader.className = "shows__header"
+let showsTitle = document.createTextNode("Shows");
+showsHeader.appendChild(showsTitle);
+showsSection.appendChild(showsHeader);
 
 
+
+// function that builds the "shows__card"
 function makeShowItem(obj){
 
   let dateHeaderEl = makeHeader("DATE")
@@ -130,21 +136,6 @@ function makeShowItem(obj){
   showsSection.appendChild(showsCard)
 }
 
-console.log(showsSection)
-
-
-
-
-
-
-
-
-
-
-// make function that populates the textnodes with object values from the array
-
-// make for loop that spits out all the values from each object in array "shows"
-
 function pullInfo(arr){
   for(let i = 0; i < arr.length; i++){
     makeShowItem(arr[i])
@@ -155,16 +146,6 @@ pullInfo(shows)
 
 
 
-// put it all together
-// expected output
-// ---  date
-// ---  dateInfo
-// ---  venue
-// ---  venueInfo
-// ---  location
-// ---  locationInfo
-// ---  button
-// ---  divider
 
 
 
