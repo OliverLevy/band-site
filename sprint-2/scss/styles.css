@@ -309,7 +309,7 @@ p {
 
 @media (min-width: 1200px) {
   .hero {
-    padding: 0 111.25rem;
+    padding: 0 11.25rem;
   }
 }
 
@@ -715,8 +715,18 @@ p {
   width: 100%;
 }
 
+.shows__card {
+  width: 804px;
+}
+
 .shows__item {
   padding: 2.5rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .shows__item-header {
@@ -734,6 +744,12 @@ p {
 .shows__btn {
   width: 100%;
   margin: 1rem 0 1rem;
+}
+
+@media (min-width: 1200px) {
+  .shows__btn {
+    width: 160px;
+  }
 }
 
 .footer {

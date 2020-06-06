@@ -43,39 +43,129 @@ let shows = [show1, show2, show3, show4, show5, show6]
 console.log(shows)
 
 
+function makeHeader(header){
+  let showsItemHeader = document.createElement("h5");
+  showsItemHeader.className = "shows__item-header";
 
-// create elements
-
-let showsItem = document.createElement("section")
-showsItem.className = "shows__item"
-
-function makeHeader(){
-  let showItemHeader = document.createElement("h5");
-  showItemHeader.className = "shows__item-header"
+  let input = document.createTextNode(header)
+  showsItemHeader.appendChild(input)
+  return showsItemHeader;
 }
 
-function makeInfoBold(){
-  showsItemInfo.className = " shows__item-info--bold"
+function makeInfoBold(boldDate){
+  let showsItemInfoBold = document.createElement("p");
+  showsItemInfoBold.className = "shows__item-info shows__item-info--bold"
+
+  let input = document.createTextNode(boldDate)
+  showsItemInfoBold.appendChild(input)
+  return showsItemInfoBold;
 }
 
-function makeInfo(){
+function makeInfo(info){
   let showsItemInfo = document.createElement("p");
   showsItemInfo.className = "shows__item-info"
+
+  let input = document.createTextNode(info)
+  showsItemInfo.appendChild(input)
+  return showsItemInfo;
 }
 
 
-let showsBtn = document.createElement("button")
-showsBtn.className = "btn comment__add-btn shows__btn"
 
-let divider = document.createElement("div")
-divider.className = "divider";
 
-function makeItem(){
 
+let showsSection = document.getElementById("shows")
+
+
+
+function makeShowItem(obj){
+
+  let dateHeaderEl = makeHeader("DATE")
+  let dateInfoEl = makeInfoBold(obj.date)
+
+  let venueHeaderEl = makeHeader("VENUE")
+  let venueInfoEl = makeInfo(obj.venue)
+
+  let addressHeaderEl = makeHeader("LOCATION")
+  let addressInfoEl = makeInfo(obj.location)
+
+  let showsCard = document.createElement("section");
+  showsCard.className = "shows__card";
+
+  let showsDateDiv = document.createElement("div")
+  showsDateDiv.className = "shows__date-div";
+  showsDateDiv.appendChild(dateHeaderEl)
+  showsDateDiv.appendChild(dateInfoEl)
+  
+
+  let showsVenueDiv = document.createElement("div")
+  showsVenueDiv.className = "shows__venue-div";
+  showsVenueDiv.appendChild(venueHeaderEl)
+  showsVenueDiv.appendChild(venueInfoEl)
+
+  let showsLocationDiv = document.createElement("div")
+  showsLocationDiv.className = "shows__location-div";
+  showsLocationDiv.appendChild(addressHeaderEl)
+  showsLocationDiv.appendChild(addressInfoEl)
+
+
+  let showsItem = document.createElement("section")
+  showsItem.className = "shows__item"
+
+  let showsBtn = document.createElement("button")
+  showsBtn.className = "btn comment__add-btn shows__btn"
+  let btnText = document.createTextNode("BUY TICKET")
+  showsBtn.appendChild(btnText)
+
+  let divider = document.createElement("div")
+  divider.className = "divider";
+
+  showsItem.appendChild(showsDateDiv)
+  showsItem.appendChild(showsVenueDiv)
+  showsItem.appendChild(showsLocationDiv)
+  showsItem.appendChild(showsBtn)
+  showsCard.appendChild(showsItem)
+  showsCard.appendChild(divider)
+
+  showsSection.appendChild(showsCard)
 }
 
+console.log(showsSection)
 
-// create textnode to go within those elements
+
+
+
+
+
+
+
 
 
 // make function that populates the textnodes with object values from the array
+
+// make for loop that spits out all the values from each object in array "shows"
+
+function pullInfo(arr){
+  for(let i = 0; i < arr.length; i++){
+    makeShowItem(arr[i])
+  }
+}
+
+pullInfo(shows)
+
+
+
+// put it all together
+// expected output
+// ---  date
+// ---  dateInfo
+// ---  venue
+// ---  venueInfo
+// ---  location
+// ---  locationInfo
+// ---  button
+// ---  divider
+
+
+
+

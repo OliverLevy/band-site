@@ -96,6 +96,7 @@
   align-items: center;
   justify-content: flex-start;
   height: 183px;
+  
 }
 
 .shows-hero{
@@ -124,7 +125,7 @@
   }
 
   @include desktop{
-    padding: 0 111.25rem;
+    padding: 0 11.25rem;
   }
   
   
@@ -434,8 +435,14 @@
   padding: 1.5rem 1rem;
   width: 100%;
 
+  &__card{
+    width: 804px;
+  }
+
   &__item{
     padding: 2.5rem 0 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__item-header{
@@ -452,6 +459,10 @@
   &__btn{
     width: 100%;
     margin: 1rem 0 1rem;
+    
+    @include desktop{
+      width: 160px;
+    }
   }
 }
 
