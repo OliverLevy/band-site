@@ -276,6 +276,19 @@ p {
   height: 183px;
 }
 
+@media (min-width: 768px) {
+  .bio-hero {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bio-hero {
+    height: 670px;
+    width: 100%;
+  }
+}
+
 .shows-hero {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.5)), to(rgba(50, 50, 50, 0.5))), url(/Assets/Images/Mohan-muruge.jpg);
   background-image: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/Assets/Images/Mohan-muruge.jpg);
@@ -287,6 +300,13 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 472px;
+}
+
+@media (min-width: 768px) {
+  .shows-hero {
+    height: 760px;
+    padding: 6rem 1.5rem;
+  }
 }
 
 .shows-hero__text-container {
@@ -302,7 +322,7 @@ p {
 @media (min-width: 768px) {
   .hero {
     padding: 2rem;
-    font-size: 3.75rem;
+    font-size: 3.75rem !important;
     line-height: 5.5rem;
   }
 }
@@ -310,19 +330,6 @@ p {
 @media (min-width: 1200px) {
   .hero {
     padding: 0 11.25rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero {
-    height: 400px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero {
-    height: 670px;
-    width: 100%;
   }
 }
 
@@ -716,8 +723,33 @@ p {
 }
 
 @media (min-width: 1200px) {
+  .shows {
+    padding: 0 11.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .shows__header {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .shows__header {
+    padding: 3rem 2rem 0 0;
+  }
+}
+
+@media (min-width: 1200px) {
   .shows__card {
     width: 804px;
+    padding: 3rem 0;
   }
 }
 

@@ -81,6 +81,10 @@ let showsTitle = document.createTextNode("Shows");
 showsHeader.appendChild(showsTitle);
 showsSection.appendChild(showsHeader);
 
+let showsCard = document.createElement("section");
+showsCard.className = "shows__card";
+showsSection.appendChild(showsCard)
+
 
 
 // function that builds the "shows__card"
@@ -95,8 +99,7 @@ function makeShowItem(obj){
   let addressHeaderEl = makeHeader("LOCATION")
   let addressInfoEl = makeInfo(obj.location)
 
-  let showsCard = document.createElement("section");
-  showsCard.className = "shows__card";
+  
 
   let showsDateDiv = document.createElement("div")
   showsDateDiv.className = "shows__date-div";
@@ -133,7 +136,7 @@ function makeShowItem(obj){
   showsCard.appendChild(showsItem)
   showsCard.appendChild(divider)
 
-  showsSection.appendChild(showsCard)
+  
 }
 
 function pullInfo(arr){
