@@ -548,12 +548,34 @@ p {
 }
 
 .comment {
-  padding: 2rem 1rem 1rem;
-  max-width: 528px;
+  padding: 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .comment {
+    max-width: 528px;
+    margin: 0 auto;
+  }
+}
+
+.comment__header {
+  padding: 2rem 1rem 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .comment__header {
+    padding: 3rem 1.5rem 3.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .comment__header {
+    padding: 3rem 11.25rem 3.5rem;
+  }
 }
 
 .comment__container {
-  padding: 2.5rem 0 2rem;
+  padding: 0 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -571,7 +593,7 @@ p {
   background-position: left;
   background-size: cover;
   position: relative;
-  top: 28px;
+  top: 24px;
 }
 
 .comment__add {
@@ -658,6 +680,10 @@ p {
   height: 1px;
 }
 
+.spacer {
+  height: 40px;
+}
+
 .btn {
   background: #323232;
   color: #ffffff;
@@ -675,7 +701,14 @@ p {
 }
 
 .comment-card {
-  padding: 1rem 1rem;
+  padding: 1.5rem 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .comment-card {
+    max-width: 528px;
+    margin: 0 auto;
+  }
 }
 
 .previous-comment {
@@ -714,7 +747,7 @@ p {
 }
 
 .previous-comment__text {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .shows {

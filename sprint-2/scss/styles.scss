@@ -305,12 +305,31 @@
   }
 }
 
+
+
 .comment{
-  padding: 2rem 1rem 1rem;
-  max-width: 528px;
+  padding: 0 1rem 0;
+  
+  @include tablet{
+    max-width: 528px;
+    margin: 0 auto;
+  }
+
+  &__header{
+    padding: 2rem 1rem 2.5rem;
+
+    @include tablet{
+      padding: 3rem 1.5rem 3.5rem;
+    }
+
+    @include desktop{
+      padding: 3rem 11.25rem 3.5rem;
+    }
+
+  }
 
   &__container{
-    padding: 2.5rem 0 2rem;
+    padding: 0 0 2rem;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -324,7 +343,7 @@
     background-position: left;
     background-size: cover;
     position: relative;
-    top: 28px;
+    top: 24px;
   }
 
   &__add{
@@ -383,6 +402,10 @@
   height: 1px;
 }
 
+.spacer{
+  height: 40px;
+}
+
 .btn{
   background: $black;
   color: $white;
@@ -399,7 +422,12 @@
   }
 }
 .comment-card{
-  padding: 1rem 1rem;
+  padding: 1.5rem 1rem 0;
+
+  @include tablet{
+    max-width: 528px;
+    margin: 0 auto;
+  }
 }
 
 .previous-comment{
@@ -429,7 +457,7 @@
   }
 
   &__text{
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
   
 }
