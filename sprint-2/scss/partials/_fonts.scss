@@ -85,6 +85,11 @@ p{
 }
 
 @mixin hero-header {
-  font-size: 3.75rem !important;
+  font-size: 3.75rem;
   line-height: 5.5rem;
+}
+
+@mixin hero-sub-header {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }

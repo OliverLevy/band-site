@@ -94,7 +94,7 @@ let user2 = {
 let user3 = {
   name: "Bill Whatshisname",
   comment: "I've seen better. Wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-  dateAdded: "12/05/2020"
+  dateAdded: "12/05/2020",
 };
 
 let users = [user1, user2, user3]
@@ -109,23 +109,20 @@ addNewComment(users);
 
 
 
+let date = function makeDate(){
+  let date = new Date().getUTCDate();
+  let month = new Date().getUTCMonth() + 1;
+  let year = new Date().getUTCFullYear();
+ return (`${date}/${month}/${year}`);
+}
 
-// figures out current time
-let d = new Date();
-// get time
-let hours = d.getHours();
-let minutes = d.getMinutes();
-let seconds = d.getSeconds();
-let time = (`${hours}:${minutes}:${seconds}`)
-// get date
-let day = d.getDate();
-let month = (d.getMonth() + 1);
-let year = d.getFullYear();
-let date = (`${month}/${day}/${year}`);
-// assign date and time to hidden form element
-document.getElementById("current-date").value = date;
-document.getElementById("current-time").value = time;
 
+let time = function makeTime(){
+  let hour = new Date().getUTCHours();
+  let minute = new Date().getUTCMinutes();
+  let second = new Date().getUTCSeconds();
+ return (`${hour}:${minute}:${second}`);
+}
 
 // submit values to "displayComment" function
 let form = document.querySelector(".comment__add");
@@ -135,7 +132,8 @@ function submissionHandler(event){
   let newUser = {
     name: event.target.userName.value,
     comment: event.target.comment.value,
-    dateAdded: event.target.date.value
+    dateAdded: date(),
+    timeAdded: time(),
   }
   if (newUser.name === "" || newUser.comment === ""){
     return;

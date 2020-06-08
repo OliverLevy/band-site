@@ -111,31 +111,71 @@
 .shows-hero{
   background-image: 
   linear-gradient(rgba(50,50,50,0.5), rgba(50,50,50,0.5)),
-  url(/Assets/Images/Mohan-muruge.jpg);
-  display: flex;
-  flex-direction: column;
+  url(/Assets/Images/noiseporn-fZGl__1jt3M-unsplash.jpg);
   height: 472px;
 
   @include tablet{
-    height: 760px;
+    height: 670px;
     padding: 6rem 1.5rem;
   }
 
-  &__text-container{
-    padding: 64px 0;
+  @include desktop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
+  &__container{
+    display: flex;
+    flex-direction: column;
 
+    @include desktop{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  
+
+  &__text-container{
+    padding: 4rem 0;
+
+    @include tablet{
+      padding: 6rem 0 4rem;
+    }
+
+    @include desktop{
+      padding: 0 64px 0 0;
+    }
+
+  }
+
+  
+
+  &__i-frame{
+    width: 100%;
+    height: 126px;
+
+    @include tablet{
+      width: 436px;
+    }
+
+    @include desktop{
+      height: 146px;
+      position: relative;
+      top: -20px;
+    }
+  }
 }
 
 .hero{
   background-position: center;
   background-size: cover;
-  padding: 1rem;
+  padding: 0 1rem;
 
   @include tablet{
-    padding: 2rem;
-    @include hero-header;
+    padding: 0 2rem;
   }
 
   @include desktop{
@@ -144,7 +184,19 @@
 
   &__text{
     color: $white;
-    padding: .5rem
+
+    @include tablet{
+      @include hero-header;
+    }
+  }
+
+  &__sub-text{
+    padding-bottom: 1rem;
+
+    @include tablet{
+      @include hero-sub-header;
+      padding-bottom: 2rem;
+    }
   }
 
 }
@@ -484,14 +536,10 @@
   }
 
   &__card{
-
-
-    @include tablet{
-      
-    }
-
+    padding: 0 0 1rem 0;
+    
     @include desktop{
-     width: 804px;
+      width: 804px;
       padding: 3rem 0;
     }
     
