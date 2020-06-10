@@ -4,7 +4,7 @@ function displayComment(test){
 // content is found first
 
 let nameInput = document.createTextNode(test.name);
-let dateInput = document.createTextNode(test.dateAdded);
+let dateInput = document.createTextNode(test.timestamp);
 let textInput = document.createTextNode(test.comment);
 
 
@@ -72,57 +72,24 @@ commentCard.appendChild(divider);
 document.getElementById("comments").prepend(commentCard);
 }
 
-// this populates the function above that creates all the sections and appends them to the correct parents
-// displayComment(user1['name'], user1['dateAdded'], user1['comment']);
-
-// displayComment(user1['name'], user1['dateAdded'], user1['comment']);
-
-let user1 = {
-  name: "Oliver Levy",
-  comment: "wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-  dateAdded: "04/05/2000"
-};
-
-// console.log(user1['name'])
-
-let user2 = {
-  name: "Simone Ades",
-  comment: "OMG WOWOWOW! I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-  dateAdded: "02/05/2010"
-};
-
-let user3 = {
-  name: "Bill Whatshisname",
-  comment: "I've seen better. Wow I love this band so much! Holy moly I will got to all of their shows forever and ever and ever wowowowowow.",
-  dateAdded: "12/05/2020",
-};
-
-let users = [user1, user2, user3]
-
-
-function addNewComment(array){
-  for(let i = 0; i < users.length; i++){
-    displayComment(array[i])
-  }
-}
-addNewComment(users);
 
 
 
-let date = function makeDate(){
-  let date = new Date().getUTCDate();
-  let month = new Date().getUTCMonth() + 1;
-  let year = new Date().getUTCFullYear();
- return (`${date}/${month}/${year}`);
-}
+
+// let date = function makeDate(){
+//   let date = new Date().getUTCDate();
+//   let month = new Date().getUTCMonth() + 1;
+//   let year = new Date().getUTCFullYear();
+//  return (`${date}/${month}/${year}`);
+// }
 
 
-let time = function makeTime(){
-  let hour = new Date().getUTCHours();
-  let minute = new Date().getUTCMinutes();
-  let second = new Date().getUTCSeconds();
- return (`${hour}:${minute}:${second}`);
-}
+// let time = function makeTime(){
+//   let hour = new Date().getUTCHours();
+//   let minute = new Date().getUTCMinutes();
+//   let second = new Date().getUTCSeconds();
+//  return (`${hour}:${minute}:${second}`);
+// }
 
 // submit values to "displayComment" function
 let form = document.querySelector(".comment__add");
@@ -132,13 +99,13 @@ function submissionHandler(event){
   let newUser = {
     name: event.target.userName.value,
     comment: event.target.comment.value,
-    dateAdded: date(),
-    timeAdded: time(),
+    timestamp: new Date().toLocaleString().split(' ')[0]
+    // timeAdded: time(),
   }
   if (newUser.name === "" || newUser.comment === ""){
     return;
   } else {
-    users.push(newUser);
+    // users.push(newUser);
     displayComment(newUser);
     event.target.reset();
   }
@@ -148,3 +115,33 @@ function submissionHandler(event){
 form.onsubmit = function(event){
   submissionHandler(event);
 }
+
+
+console.log("hello world")
+
+// GET /comments
+// POST /comments
+// GET /showdates
+
+// let api = "https://project-1-api.herokuapp.com/"
+// let apiKey = "069992ce-754e-4135-b5a2-bcdbad47401b"
+let apiComment = "https://project-1-api.herokuapp.com/comments?api_key=069992ce-754e-4135-b5a2-bcdbad47401b"
+let apishowdates = "https://project-1-api.herokuapp.com/showdates?api_key=069992ce-754e-4135-b5a2-bcdbad47401b"
+
+
+// name:
+// comment:
+// timestamp:
+
+axios.get("https://project-1-api.herokuapp.com/comments?api_key=069992ce-754e-4135-b5a2-bcdbad47401b")
+.then(success => {
+  console.log(success.data[0])
+  for(let i = 0; i < success.data.length; i++){
+    displayComment(success.data[i])
+  }
+})
+.catch(error =>{
+  console.error("Something went wrong", error)
+})
+
+let rightNow = new Date()

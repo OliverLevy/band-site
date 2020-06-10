@@ -7,8 +7,8 @@
         "partials/_fonts.scss",
         "partials/_variables.scss",
         "partials/_avenir.scss",
-        "partials/mixin.scss",
-        "partials/mixin.scss",
+        "partials/_mixin.scss",
+        "partials/_mixin.scss",
         "partials/_variables.scss",
         "partials/_avenir.scss"
     ],
