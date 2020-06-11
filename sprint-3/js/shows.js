@@ -94,7 +94,7 @@ function makeShowItem(obj){
   let dateInfoEl = makeInfoBold(obj.date)
 
   let venueHeaderEl = makeHeader("VENUE")
-  let venueInfoEl = makeInfo(obj.venue)
+  let venueInfoEl = makeInfo(obj.place)
 
   let addressHeaderEl = makeHeader("LOCATION")
   let addressInfoEl = makeInfo(obj.location)
@@ -161,3 +161,20 @@ function addClass(arr){
 
 addClass(firstHeaders);
 
+
+// let api = "https://project-1-api.herokuapp.com/"
+// let apiKey = "069992ce-754e-4135-b5a2-bcdbad47401b"
+let apiComment = "https://project-1-api.herokuapp.com/comments?api_key=069992ce-754e-4135-b5a2-bcdbad47401b"
+let apishowdates = "https://project-1-api.herokuapp.com/showdates?api_key=069992ce-754e-4135-b5a2-bcdbad47401b"
+
+
+axios.get(apishowdates)
+.then(success => {
+  console.log(success)
+  for(let i = 0; i < success.data.length; i++){
+    makeShowItem(success.data[i])
+  }
+})
+.catch(error =>{
+  console.error("Something went wrong", error)
+})
