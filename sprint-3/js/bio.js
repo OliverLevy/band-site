@@ -7,11 +7,11 @@ function displayComment(test){
 
 
   let divider = document.createElement("div");
-  divider.className = "divider";
+  divider.classList.add("divider");
 
 
   let previousCommentDate = document.createElement("h5");
-  previousCommentDate.className = "previous-comment__date";
+  previousCommentDate.classList.add("previous-comment__date");
   previousCommentDate.appendChild(dateInput);
 
   let previousCommentName = document.createElement("h4");
@@ -20,32 +20,32 @@ function displayComment(test){
 
 
   let previousCommentInfoContainer = document.createElement("section");
-  previousCommentInfoContainer.className = "previous-comment__info-container";
+  previousCommentInfoContainer.classList.add("previous-comment__info-container");
 
   previousCommentInfoContainer.appendChild(previousCommentName);
   previousCommentInfoContainer.appendChild(previousCommentDate);
 
   let previousCommentText = document.createElement("p");
-  previousCommentText.className = "previous-comment__text";
+  previousCommentText.classList.add("previous-comment__text");
   previousCommentText.appendChild(textInput)
 
   let previousCommentInfo = document.createElement("section");
-  previousCommentInfo.className = "previous-comment__info";
+  previousCommentInfo.classList.add("previous-comment__info");
 
   previousCommentInfo.appendChild(previousCommentInfoContainer);
   previousCommentInfo.appendChild(previousCommentText);
 
   let previousCommentImgCircle = document.createElement("div");
-  previousCommentImgCircle.className = "previous-comment__img-circle";
+  previousCommentImgCircle.classList.add("previous-comment__img-circle");
 
   let previousComment = document.createElement("section");
-  previousComment.className = "previous-comment";
+  previousComment.classList.add("previous-comment");
 
   previousComment.appendChild(previousCommentImgCircle);
   previousComment.appendChild(previousCommentInfo);
 
   let commentCard = document.createElement("section");
-  commentCard.className = "comment-card";
+  commentCard.classList.add("comment-card");
 
   commentCard.appendChild(previousComment);
   commentCard.appendChild(divider);

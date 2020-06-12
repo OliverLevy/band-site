@@ -890,6 +890,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -917,6 +918,8 @@ p {
     display: none;
   }
   .shows__item-header--show-me {
+    position: absolute;
+    top: 0;
     display: block;
   }
 }
