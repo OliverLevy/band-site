@@ -1,46 +1,3 @@
-// Makes the "Shows" table
-
-
-// array of objects for all the shows
-let show1 = {
-  date: "Mon Dec 17 2018",
-  venue: "Ronald Lane",
-  location: "San Fancisco, CA"
-}
-
-let show2 = {
-  date: "Tue Jul 18 2019",
-  venue: "Pier 3 East",
-  location: "San Fancisco, CA"
-}
-
-let show3 = {
-  date: "Fri Jul 22 2019",
-  venue: "View Loungue",
-  location: "San Fancisco, CA"
-}
-
-let show4 = {
-  date: "Sat Aug 12 2019",
-  venue: "Hyatt Agency",
-  location: "San Fancisco, CA"
-}
-
-let show5 = {
-  date: "Fri Sep 05 2019",
-  venue: "Moscow Center",
-  location: "San Fancisco, CA"
-}
-
-let show6 = {
-  date: "Wed Aug 11 2019",
-  venue: "Pres Club",
-  location: "San Fancisco, CA"
-}
-
-let shows = [show1, show2, show3, show4, show5, show6]
-
-
 // functions to shorten my code
 function makeHeader(header){
   let showsItemHeader = document.createElement("h5");
@@ -136,34 +93,19 @@ function makeShowItem(obj){
   showsCard.appendChild(showsItem)
   showsCard.appendChild(divider)
 
+  let findFirst = document.querySelector(".shows__item")
+  let firstHeaders = findFirst.getElementsByClassName("shows__item-header");
+
+  function addClass(arr){
+    for(let i = 0; i < arr.length; i++){
+      arr[i].classList.add("shows__item-header--show-me")
+    }
+  }
+  addClass(firstHeaders);
   
 }
 
-function pullInfo(arr){
-  for(let i = 0; i < arr.length; i++){
-    makeShowItem(arr[i])
-  }
-}
 
-pullInfo(shows)
-
-
-
-// add class to first three
-let findFirst = document.querySelector(".shows__item")
-let firstHeaders = findFirst.getElementsByClassName("shows__item-header");
-
-function addClass(arr){
-  for(let i = 0; i < arr.length; i++){
-    arr[i].classList.add("shows__item-header--show-me")
-  }
-}
-
-addClass(firstHeaders);
-
-
-// let api = "https://project-1-api.herokuapp.com/"
-// let apiKey = "069992ce-754e-4135-b5a2-bcdbad47401b"
 let apiComment = "https://project-1-api.herokuapp.com/comments?api_key=069992ce-754e-4135-b5a2-bcdbad47401b"
 let apishowdates = "https://project-1-api.herokuapp.com/showdates?api_key=069992ce-754e-4135-b5a2-bcdbad47401b"
 
@@ -171,6 +113,7 @@ let apishowdates = "https://project-1-api.herokuapp.com/showdates?api_key=069992
 axios.get(apishowdates)
 .then(success => {
   console.log(success)
+  console.log(success.data[0].place)
   for(let i = 0; i < success.data.length; i++){
     makeShowItem(success.data[i])
   }
@@ -178,3 +121,6 @@ axios.get(apishowdates)
 .catch(error =>{
   console.error("Something went wrong", error)
 })
+
+
+

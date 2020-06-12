@@ -54,51 +54,6 @@ function displayComment(test){
 }
 
 
-// submit values to "displayComment" function
-let form = document.querySelector(".comment__add");
-
-// function submissionHandler(event){
-//   event.preventDefault();
-//   let newUser = {
-//     name: event.target.userName.value,
-//     comment: event.target.comment.value,
-//     timestamp: new Date().toLocaleDateString()
-//     // timeAdded: time(),
-//   }
-//   if (newUser.name === "" || newUser.comment === ""){
-//     return;
-//   } else {
-//     displayComment(newUser);
-//     event.target.reset();
-//   }
-  
-// }
-
-
-  
-
-
-
-// function submissionHandler(event){
-//   event.preventDefault();
-//   let newUser = {
-//     name: event.target.userName.value,
-//     comment: event.target.comment.value,
-//     timestamp: new Date().toLocaleDateString()
-//     // timeAdded: time(),
-//   }
-//   if (newUser.name === "" || newUser.comment === ""){
-//     return;
-//   } else {
-//     displayComment(newUser);
-//     event.target.reset();
-//   }
-  
-// }
-
-
-
-
 
 
 
@@ -121,45 +76,27 @@ axios.get("https://project-1-api.herokuapp.com/comments?api_key=069992ce-754e-41
 
 
 
+
 function submissionHandler(event){
   event.preventDefault();
+  let nameEl = event.target.userName.value;
+  let commentEl = event.target.comment.value;
   axios
   .post("https://project-1-api.herokuapp.com/comments?api_key=069992ce-754e-4135-b5a2-bcdbad47401b", {
-    name: event.target.userName.value,
-    comment: event.target.comment.value,
+    name: nameEl,
+    comment: commentEl
   })
   .then(success => {
-    console.log("it worked", success)
-    displayComment(success);
+    displayComment(success.data);
     event.target.reset();
   })
   .catch(err => {
-    console.log("it didn't work", err)
+    console.log("Something went wrong, good luck!", err)
   })
 }
 
 
-
+let form = document.querySelector(".comment__add");
 form.onsubmit = function(event){
   submissionHandler(event);
 }
-
-
-
-
-// let rightNow = new Date()
-
-// let timeTest = 1530744138878
-
-// console.log(new Date(timeTest).toLocaleDateString())
-
-
-// let NewTimeStamp = new Date(timeTest)
-
-// console.log(NewTimeStamp.toLocaleDateString())
-
-// let testing = new Date().getTime();
-
-// let testing2 = testing - timeTest
-// console.log(testing2)
-// console.log(testing2 / 1000 / 60 / 60 / 24 / 365)
