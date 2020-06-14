@@ -2,27 +2,21 @@
 function makeHeader(header){
   let showsItemHeader = document.createElement("h5");
   showsItemHeader.classList.add("shows__item-header");
-
-  let input = document.createTextNode(header);
-  showsItemHeader.appendChild(input);
+  showsItemHeader.innerText = header;
   return showsItemHeader;
 }
 
 function makeInfoBold(boldDate){
   let showsItemInfoBold = document.createElement("p");
-  showsItemInfoBold.classList.add("shows__item-info shows__item-info--bold");
-
-  let input = document.createTextNode(boldDate);
-  showsItemInfoBold.appendChild(input);
+  showsItemInfoBold.classList.add("shows__item-info", "shows__item-info--bold");
+  showsItemInfoBold.innerText = boldDate;
   return showsItemInfoBold;
 }
 
 function makeInfo(info){
   let showsItemInfo = document.createElement("p");
   showsItemInfo.classList.add("shows__item-info");
-
-  let input = document.createTextNode(info);
-  showsItemInfo.appendChild(input);
+  showsItemInfo.innerText = info;
   return showsItemInfo;
 }
 
@@ -30,8 +24,7 @@ let showsSection = document.getElementById("shows");
 
 let showsHeader = document.createElement("h1");
 showsHeader.classList.add("shows__header");
-let showsTitle = document.createTextNode("Shows");
-showsHeader.appendChild(showsTitle);
+showsHeader.innerText = "Shows";
 showsSection.appendChild(showsHeader);
 
 let showsCard = document.createElement("section");
@@ -75,9 +68,8 @@ function makeShowItem(obj){
   showsItem.classList.add("shows__item");
 
   let showsBtn = document.createElement("button");
-  showsBtn.classList.add("btn comment__add-btn shows__btn");
-  let btnText = document.createTextNode("BUY TICKET");
-  showsBtn.appendChild(btnText);
+  showsBtn.classList.add("btn", "comment__add-btn", "shows__btn");
+  showsBtn.innerText = "BUY TICKET"
 
   let divider = document.createElement("div");
   divider.classList.add("divider");

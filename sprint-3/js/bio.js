@@ -1,9 +1,43 @@
 // hello world
 
+
+
+let testTime = 1591996318458
+let testNow = Date.now()
+let test = testNow - testTime
+
+doMath = (userTime) => {
+  let min = 1000 * 60
+  let hour = 1000 * 60 * 60
+  let day = 1000 * 60 * 60 * 24
+  let month = 1000 * 60 * 60 * 24 * 30
+  let year = 1000 * 60 * 60 * 24 * 365
+  let testTime = userTime
+  let testNow = Date.now()
+  let output = testNow - testTime
+  if(output < hour){
+    
+    return output/min
+  } else if(output < day){
+    return output/hour
+  } else if (output < month){
+    return output/hour
+  } else {
+    return output/month
+  }
+}
+let output = doMath(testTime)
+let hourz = Math.trunc(output)
+let minz = Math.trunc((output%1)*60)
+console.log(`Posted ${hourz}hr ago`)
+
+
+
+
 function displayComment(test){
-  let nameInput = document.createTextNode(test.name);
-  let dateInput = document.createTextNode(new Date(test.timestamp).toLocaleDateString());
-  let textInput = document.createTextNode(test.comment);
+  let nameInput = test.name;
+  let dateInput = new Date(test.timestamp).toLocaleDateString()
+  let textInput = test.comment;
 
 
   let divider = document.createElement("div");
@@ -12,11 +46,11 @@ function displayComment(test){
 
   let previousCommentDate = document.createElement("h5");
   previousCommentDate.classList.add("previous-comment__date");
-  previousCommentDate.appendChild(dateInput);
+  previousCommentDate.innerText = dateInput;
 
   let previousCommentName = document.createElement("h4");
   previousCommentName.classList.add("previous-comment__name");
-  previousCommentName.appendChild(nameInput);
+  previousCommentName.innerText = nameInput;
 
 
   let previousCommentInfoContainer = document.createElement("section");
@@ -27,7 +61,7 @@ function displayComment(test){
 
   let previousCommentText = document.createElement("p");
   previousCommentText.classList.add("previous-comment__text");
-  previousCommentText.appendChild(textInput)
+  previousCommentText.innerText = textInput;
 
   let previousCommentInfo = document.createElement("section");
   previousCommentInfo.classList.add("previous-comment__info");
