@@ -100,9 +100,9 @@ let apishowdates = "https://project-1-api.herokuapp.com/showdates?api_key=069992
 axios.get("https://project-1-api.herokuapp.com/comments?api_key=069992ce-754e-4135-b5a2-bcdbad47401b")
 .then(success => {
   console.log(success)
-  for(let i = 0; i < success.data.length; i++){
-    displayComment(success.data[i])
-  }
+  success.data.forEach(element => {
+    displayComment(element)
+  });
 })
 .catch(error =>{
   console.error("Something went wrong", error)

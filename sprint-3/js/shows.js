@@ -83,7 +83,7 @@ function makeShowItem(obj){
 
   let findFirst = document.querySelector(".shows__item")
   let firstHeaders = findFirst.getElementsByClassName("shows__item-header");
-
+  
   function addClass(arr){
     for(let i = 0; i < arr.length; i++){
       arr[i].classList.add("shows__item-header--show-me")
@@ -99,9 +99,9 @@ axios.get(apishowdates)
 .then(success => {
   console.log(success)
   console.log(success.data[0].place)
-  for(let i = 0; i < success.data.length; i++){
-    makeShowItem(success.data[i])
-  }
+  success.data.forEach(element => {
+    makeShowItem(element)
+  });
 })
 .catch(error =>{
   console.error("Something went wrong", error)
